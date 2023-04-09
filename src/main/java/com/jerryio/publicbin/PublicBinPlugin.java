@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.logging.Level;
 
 import org.bstats.bukkit.Metrics;
+import org.bstats.charts.SimplePie;
 import org.bukkit.plugin.PluginDescriptionFile;
 import org.bukkit.plugin.java.JavaPlugin;
 import org.bukkit.plugin.java.JavaPluginLoader;
@@ -161,7 +162,7 @@ public class PublicBinPlugin extends JavaPlugin {
             Class.forName("com.google.gson.JsonElement");
             if (System.getProperty("MockTest") == null) {
                 Metrics metrics = new Metrics(this, 9744);
-                metrics.addCustomChart(new Metrics.SimplePie("using_mode", () ->  setting.getMode().toString()));
+                metrics.addCustomChart(new SimplePie("using_mode", () ->  setting.getMode().toString()));
             }
         } catch (Exception e) {
             // nothing to do
