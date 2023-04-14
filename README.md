@@ -1,4 +1,4 @@
-# Public Bin
+# Public Bin [Now 1.19.X supported]
 
 ![Java CI with Maven](https://github.com/Jerrylum/PublicBin/workflows/Java%20CI%20with%20Maven/badge.svg) [![codecov](https://codecov.io/gh/Jerrylum/PublicBin/branch/main/graph/badge.svg?token=EQUQL9NL7R)](https://codecov.io/gh/Jerrylum/PublicBin) [![GitHub license](https://img.shields.io/github/license/Jerrylum/PublicBin)](https://github.com/Jerrylum/PublicBin)
 
