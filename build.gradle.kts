@@ -42,7 +42,7 @@ dependencies {
 }
 
 group = "com.jerryio.publicbin"
-version = "1.1.1"
+version = "1.1.2"
 description = "PublicBin"
 java.sourceCompatibility = JavaVersion.VERSION_1_8
 

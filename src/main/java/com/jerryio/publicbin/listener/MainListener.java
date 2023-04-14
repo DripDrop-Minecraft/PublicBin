@@ -35,7 +35,7 @@ public class MainListener implements Listener {
 
     // We process the click event when the player is allowed to.
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
-    public void onInventoryClickEvent​(InventoryClickEvent event) {
+    public void onInventoryClickEvent(InventoryClickEvent event) {
         Bin usingBin = getInteractBin(event);
         if (usingBin == null)
             return;
@@ -45,7 +45,7 @@ public class MainListener implements Listener {
 
     // We process the click event when the player is allowed to.
     @EventHandler(priority = EventPriority.HIGH, ignoreCancelled = true)
-    public void onInventoryDragEvent​(InventoryDragEvent event) {
+    public void onInventoryDragEvent(InventoryDragEvent event) {
         Bin usingBin = getInteractBin(event);
         if (usingBin == null)
             return;
@@ -54,7 +54,7 @@ public class MainListener implements Listener {
     }
 
     @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
-    public void onInventoryOpenEvent​(InventoryOpenEvent event) {
+    public void onInventoryOpenEvent(InventoryOpenEvent event) {
         Player p = (Player) event.getPlayer();
         Bin usingBin = getInteractBin(event.getInventory(), p);
         if (usingBin == null)
@@ -64,7 +64,7 @@ public class MainListener implements Listener {
     }
     
     @EventHandler(priority = EventPriority.NORMAL, ignoreCancelled = true)
-    public void onInventoryCloseEvent​(InventoryCloseEvent event) {
+    public void onInventoryCloseEvent(InventoryCloseEvent event) {
         Player p = (Player) event.getPlayer();
         Bin usingBin = getInteractBin(event.getInventory(), p);
         if (usingBin == null)
@@ -86,13 +86,6 @@ public class MainListener implements Listener {
     @EventHandler(priority = EventPriority.NORMAL)
     public void onItemDespawnEvent(ItemDespawnEvent event) {
         PublicBinPlugin.getBinManager().trackDroppedItem(event.getEntity());
-    }
-    
-    @EventHandler(priority = EventPriority.HIGHEST, ignoreCancelled = true)
-    public void onEntityDamageEvent(EntityDamageEvent event) {
-        Entity e = event.getEntity();
-        if (e.getType() == EntityType.DROPPED_ITEM)
-            PublicBinPlugin.getBinManager().trackDroppedItem((Item) e);
     }
     
     @EventHandler
